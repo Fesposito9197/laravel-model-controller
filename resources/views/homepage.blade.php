@@ -20,15 +20,27 @@
     <main>
         <div class="container">
             
-           @foreach ($movies as $movie)
-               <ul>
-                <li>{{$movie->title}}</li>
-                <li>{{$movie->original_title}}</li>
-                <li>{{$movie->nationality}}</li>
-                <li>{{$movie->date}}</li>
-                <li>{{$movie->vote}}</li>
-               </ul>
-           @endforeach
+            <div class="row gx-5 p-3 justify-content-center">
+
+                @foreach ($movies as $movie)
+                {{-- <div class="card col-4 m-3" >
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div> --}}
+                <div class="card col-4 m-3">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Titolo: {{$movie->title}}</li>
+                        <li class="list-group-item">Titolo originale: {{$movie->original_title}}</li>
+                        <li class="list-group-item">Nazionalita: {{$movie->nationality}}</li>
+                        <li class="list-group-item">Data d'uscita: {{$movie->date}}</li>
+                        <li class="list-group-item">Voto: {{$movie->vote}}</li>
+                    </ul>
+                </div>
+                @endforeach
+            </div>
+            
+
         </div>
     </main>
 
